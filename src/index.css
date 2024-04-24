@@ -1,13 +1,58 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  color: #555555;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  "Oxygen","Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, p, figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.container {
+  width: 92%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.fruitsList {
+  display: grid;
+  gap: 30px;
+  padding-block: 30px;
+}
+
+.fruitsList h1 {
+  justify-self: center;
+  grid-column: 1 / -1;
+}
+
+.fruitsList img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.text p {
+  font-size: 36px;
+}
+
+@media (min-width: 768px) {
+  .fruitsList {
+    grid-template-columns: 1fr 1fr;
+  }
 }
